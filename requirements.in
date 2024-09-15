@@ -1,0 +1,7 @@
+django
+djangorestframework
+djangorestframework-api-key
+django-celery
+redis
+requests
+beutifulsoup4
