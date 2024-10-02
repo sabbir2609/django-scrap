@@ -1,0 +1,27 @@
+Description:
+[1] User Registration & Authentication:
+Multiple users can register and will be assigned unique API keys.
+The API key will be used to authenticate users when they make requests.
+
+[2] URL Scraping Endpoint:
+Users can call an API endpoint, providing a URL
+The system will scrape the provided URL and return all email addresses found on that webpage.
+
+[3] History Tracking:
+Each user can view their past requests, including the URLs they have previously submitted for scraping.
+
+[4] Rate Limiting (Optional):
+You may want to limit the number of requests a user can make within a given timeframe to prevent abuse of the service.
+
+Used Packages: 
+django
+djangorestframework
+djangorestframework-api-key
+"celery[redis]"
+selenium
+webdriver_manager
+python-dotenv
+
+Commands:
+to start the server: python manage.py runserver
+to start the celery: python -m celery -A core worker -l info -E -P threads
