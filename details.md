@@ -23,4 +23,4 @@ History tracking is available, allowing users to see all past scraping requests 
 Rate Limiting
 -------------
 
-Users are limited to 10 requests per 30 minutes, preventing abuse of the service.
+Users are limited to 30 requests per day, preventing abuse of the service.
