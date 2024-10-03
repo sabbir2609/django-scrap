@@ -27,6 +27,3 @@ __pycache__/
 
 # Environment variables
 .env
-
-# Ignore migrations if using Django's default database setup
-**/migrations/
