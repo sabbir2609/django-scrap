@@ -75,6 +75,11 @@ Django Scrap is a web application that allows multiple users to register and aut
     python -m celery -A core worker -l info -E -P threads
     ```
 
+7. For production, you can use a WSGI server like Gunicorn to run the Django application.
+```sh
+gunicorn --workers 4 --bind 0.0.0.0:8000 wsgi:application
+```
+
 ## Usage
 
 1. Register a new user to get a unique API key.

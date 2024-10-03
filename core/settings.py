@@ -19,10 +19,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG")
 
-ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1"
-]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -136,5 +133,12 @@ CELERY_TIMEZONE = "UTC"
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework_api_key.permissions.HasAPIKey",
-    ]
+    ],
+}
+
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "LOCATION": os.getenv("CACHE_URL"),
+    }
 }
